@@ -1,0 +1,26 @@
+@font-face {
+  font-family: You;
+  src: url('/YOU.ttf');
+}
+
+:root {
+  --bg: #1a1a1a;
+  --text: #fff;
+  --red: #B92E34;
+  --shadow-red: #BD2031;
+
+  --ff-you: 'You', serif;
+  --ff-poppins: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--ff-poppins);
+}
