@@ -1,0 +1,9 @@
+.episodeCard {
+    width: 400px;
+    height: 350px;
+
+    img {
+        width: 400px;
+        height: 220px;
+    }
+}

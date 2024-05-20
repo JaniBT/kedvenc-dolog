@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
         <nav>
             <NavLink to="/">Kezdőlap</NavLink>
             <NavLink to="/seasons">Évadok</NavLink>
-            <NavLink to="/episodes">Részek</NavLink>
+            <NavLink to="/episodes">Epizódok</NavLink>
             <NavLink to="/characters">Szereplők</NavLink>
             <NavLink to="/plot">Cselekmény</NavLink>
             <button className={styles.volumeButton} onClick={handlePlayPause}>

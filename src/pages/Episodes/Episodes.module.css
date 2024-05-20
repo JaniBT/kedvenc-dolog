@@ -1,0 +1,81 @@
+.episodesMain {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+
+    .episodesTitle {
+
+        h1 {
+            text-align: center;
+            padding-block: 10rem;
+            color: transparent;
+
+            background: var(--title-linear-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            
+            font-size: 4rem;
+        }
+    }
+
+    .episodes {
+        width: 95%;
+        margin-inline: auto;
+        color: var(--text);
+        padding-bottom: 2rem;
+
+        select {
+            font-size: 2rem;
+            border: none;
+            background: none;
+            color: var(--text);
+
+            option {
+                background-color: var(--bg);
+                
+            }
+        }
+
+        .allEpisodes {
+            margin-top: 2rem;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            row-gap: 1rem;
+            column-gap: .5rem;
+
+            h3 {
+                font-size: 1rem;
+                margin-bottom: .5rem;
+            }
+
+            p {
+                color: var(--nav-text);
+                font-size: .75rem;
+            }
+        }
+    }
+
+    .footerOfEpisodes {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4rem;
+
+        div {
+
+            h4 {
+                color: var(--text);
+            }
+
+            p {
+                color: var(--nav-text);
+            }
+
+            a {
+                color: var(--red);
+            }
+        }
+    }
+}
