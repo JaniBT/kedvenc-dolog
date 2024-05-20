@@ -1,11 +1,13 @@
 @font-face {
   font-family: You;
-  src: url('/YOU.ttf');
+  src: url('/fonts/YOU.ttf');
 }
 
 :root {
   --bg: #1a1a1a;
   --text: #fff;
+  --nav-text: #a6adbb;
+  --hover-bg: #384046;
   --red: #B92E34;
   --shadow-red: #BD2031;
 

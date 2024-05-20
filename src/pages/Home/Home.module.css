@@ -1,72 +1,46 @@
-.navigationWrapper {
-    width: max-content;
-    position: absolute;
+.mainWrapper {
+    height: 100%;
     background-color: var(--bg);
-    width: 100%;
-    top: 0;
-    z-index: 1;
 
+    .heroSection {
+        position: relative;
+        height: 100dvh;
     
-    nav {
-        margin-block: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
+        display: grid;
+        color: var(--text);
 
-        a {
-            position: relative;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all .2s ease;
+        h1 {
+            align-self: center;
+            justify-self: center;
+            font-weight: bold;
+            font-size: 3.5rem;
+            background: linear-gradient(to left, var(--red), brown);
+            background-clip: text;
+            color: transparent;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
 
-            &:hover {
-                color: var(--shadow-red);
-            }
+            z-index: 2;
 
-            &::after {
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 2px;
-                bottom: -2px;
-                right: 0%;
-                background-color: var(--shadow-red);
-
-                transition: all .2s ease;
-            }
-
-            &:hover::after {
-                width: 100%;
+            span {
+                font-family: var(--ff-you);
+                font-weight: bolder;
+                animation: pulse 5s alternate infinite linear;
+                position: relative;
+                text-shadow: 1px 1px 2px var(--shadow-red), 0 0 1em var(--shadow-red), 0 0 0.2em var(--shadow-red);
             }
         }
     }
 }
 
-.mainWrapper {
-    display: grid;
-    position: relative;
-    place-items: center;
-
-    .motionTitle {
-        z-index: 1;
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
         color: var(--red);
-        font-family: var(--ff-you);
-        font-size: 8rem;
-        text-shadow: 1px 1px 2px var(--shadow-red), 0 0 1em var(--red), 0 0 0.2em var(--shadow-red);
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
+    }
+    50% {
+        opacity: 0;
+        color: transparent;
     }
 }
-
-.mainWrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-  }

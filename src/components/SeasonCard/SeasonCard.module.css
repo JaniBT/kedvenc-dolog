@@ -1,0 +1,16 @@
+.seasonCard {
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    transition: all .3s ease;
+
+    h2 {
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: var(--hover-bg);
+    }
+}

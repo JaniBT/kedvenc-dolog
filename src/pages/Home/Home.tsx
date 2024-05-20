@@ -1,50 +1,22 @@
+import Navbar from "../../components/Navbar/Navbar.tsx"
 import styles from "./Home.module.css"
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+
+import Footer from "../../components/Footer/Footer.tsx"
+
+import Video from "../../components/Video/Video.tsx"
 
 const Home = () => {
-  const mainWrapperStyle = {
-    backgroundImage: 'url("/mainbackground.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    width: '100%',
-    height: '100dvh'
-  }
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: 'easeInOut',
-      },
-    },
-  };
 
   return (
     <>
-        <header className={styles.navigationWrapper}>
-            <nav>
-                <Link to="/">Kezdőlap</Link>
-                <Link to="/seasons">Évadok</Link>
-                <Link to="/episodes">Részek</Link>
-                <Link to="/actors">Szereplők</Link>
-            </nav>
-        </header>
-        <main className={`${styles.mainContent}`} >
-          <section className={styles.mainWrapper} style={mainWrapperStyle}>
-            <motion.div className={styles.motionTitle}
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            >
-              <h1>YOU</h1>
-            </motion.div>
+        <Navbar />
+        <main className={styles.mainWrapper}>
+          <section className={styles.heroSection}>
+            <h1>Love Chooses <span className={styles.titleYou}>YOU</span></h1>
+            <Video />
           </section>
         </main>
+        <Footer />
     </>
   )
 }
