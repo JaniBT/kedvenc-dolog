@@ -17,7 +17,7 @@ const Episodes = () => {
         setSeason(e.target.value)
     }
 
-    const renderArray = () => {
+    const renderEpisodes = () => {
         switch (season) {
             case "1":
                 return seasonOneEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
@@ -47,7 +47,7 @@ const Episodes = () => {
                     <option value="4">4. évad</option>
                 </select>
                 <div className={styles.allEpisodes}>
-                    {renderArray()}
+                    {renderEpisodes()}
                 </div>
             </section>
             <section className={styles.footerOfEpisodes}>

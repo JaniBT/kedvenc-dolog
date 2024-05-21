@@ -29,10 +29,10 @@
             border: none;
             background: none;
             color: var(--text);
+            cursor: pointer;
 
             option {
                 background-color: var(--bg);
-                
             }
         }
 
