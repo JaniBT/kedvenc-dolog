@@ -6,9 +6,32 @@ import { Link } from "react-router-dom"
 import styles from "./Episodes.module.css"
 import EpisodeCard from "../../components/EpisodeCard/EpisodeCard"
 
-import { seasonOneEpisodes, Episode } from "../../_lib/YOUEpisodes"
+import { seasonOneEpisodes, seasonTwoEpisodes, seasonThreeEpisodes, seasonFourEpisodes, Episode } from "../../_lib/YOUEpisodes"
+
+import { useState } from "react"
 
 const Episodes = () => {
+    const [season, setSeason] = useState('1')
+
+    const handleSelection = (e: any) => {
+        setSeason(e.target.value)
+    }
+
+    const renderArray = () => {
+        switch (season) {
+            case "1":
+                return seasonOneEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
+            case "2":
+                return seasonTwoEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
+            case "3":
+                return seasonThreeEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
+            case "4":
+                return seasonFourEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
+            default:
+                return seasonOneEpisodes.map((episode: Episode) => ( <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} /> ))
+        }
+    }
+
   return (
     <>
         <Navbar />
@@ -17,16 +40,14 @@ const Episodes = () => {
                 <h1>Epizódok</h1>
             </section>
             <section className={styles.episodes}>
-                <select name="selectSeason" id="seasonSelector">
+                <select name="selectSeason" id="seasonSelector" value={season} onChange={handleSelection}>
                     <option value="1">1. évad</option>
                     <option value="2">2. évad</option>
                     <option value="3">3. évad</option>
                     <option value="4">4. évad</option>
                 </select>
                 <div className={styles.allEpisodes}>
-                    {seasonOneEpisodes.map((episode: Episode) => (
-                        <EpisodeCard key={episode.id} title={episode.title} paragraph={episode.description} />
-                    ))}
+                    {renderArray()}
                 </div>
             </section>
             <section className={styles.footerOfEpisodes}>
