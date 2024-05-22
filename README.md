@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# "You" Sorozat Weboldal Projekt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Bevezetés
 
-Currently, two official plugins are available:
+Ebben a projektben egy weboldalt készítettem a "You" című sorozatról. A weboldal célja, hogy részletes információkat nyújtson a sorozat karaktereiről, cselekményéről és évadjairól. A weboldal kialakításához a következő technológiákat használtam:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Használt Technológiák
 
-## Expanding the ESLint configuration
+### Typescript
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A projekt fő programozási nyelve a TypeScript volt. A TypeScript előnyei közé tartozik a statikus típusellenőrzés, amely nagyobb biztonságot és jobb kódminőséget biztosít a JavaScripthez képest. Ez különösen hasznos volt a nagyobb és összetettebb kódbázis kezelésénél.
 
-- Configure the top-level `parserOptions` property like this:
+### React
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+A felhasználói felület fejlesztéséhez a React keretrendszert használtam. A React lehetővé tette az újrafelhasználható komponensek létrehozását, ami egyszerűbbé és hatékonyabbá tette a weboldal fejlesztését és karbantartását. Az állapotkezelés és a React hookok használata révén dinamikus és interaktív felhasználói élményt tudtam biztosítani.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Fejlesztési Folyamat
+
+1. **Projekt inicializálása:** A projekt létrehozását a `create-react-app` eszközzel kezdtem, amelyet TypeScript támogatással konfiguráltam.
+2. **Komponensek létrehozása:** A weboldal különböző részeit önálló React komponensekként terveztem meg, mint például a navigációs sáv, az évadok listája és a karakterek részletes leírása.
+3. **Állapotkezelés:** A React hookok, mint a `useState` és a `useEffect`, segítettek az alkalmazás állapotának kezelésében és az API-kból származó adatok betöltésében.
+4. **Stílusok hozzáadása:** A weboldal megjelenését CSS modulok és styled-components használatával alakítottam ki, biztosítva a modern és reszponzív dizájnt.
+
+## Összefoglalás
+
+A TypeScript és a React kombinációja lehetővé tette számomra egy hatékony, biztonságos és felhasználóbarát weboldal létrehozását a "You" sorozatról. A projekt során szerzett tapasztalatok tovább mélyítették tudásomat ezen technológiák használatában és hozzájárultak a professzionális webfejlesztési készségeim fejlesztéséhez.
+
+## Telepítési Útmutató
+
+1. Forkold a projektet a GitHub-ról.
+2. Futtasd a `npm install` parancsot a szükséges csomagok telepítéséhez.
+3. Indítsd el az alkalmazást a `npm run dev` parancs segítségével.
+4. Nyisd meg a weboldalt a böngésződben a `http://localhost:5173` címen.
+
+Köszönöm, hogy megtekintetted a projektet!
