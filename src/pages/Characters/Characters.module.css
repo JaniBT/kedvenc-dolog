@@ -39,5 +39,19 @@
             padding-top: 4rem;
             margin-inline: auto;
         }
+
+        .allCharactersLink {
+            margin-top: 4rem;
+            text-align: center;
+
+            h5 {
+                font-size: 1.25rem;
+                color: var(--text);
+            }
+
+            a {
+                color: var(--red);
+            }
+        }
     }
 }

@@ -2,6 +2,8 @@ import Character from "../../components/Character/Character"
 import Footer from "../../components/Footer/Footer"
 import Navbar from "../../components/Navbar/Navbar"
 
+import { Link } from "react-router-dom"
+
 import styles from "./Characters.module.css"
 
 import { MainCharacterList, CharacterInterface } from "../../_lib/YOUCharacters"
@@ -20,6 +22,10 @@ const Characters = () => {
                     {MainCharacterList.map((character: CharacterInterface) => (
                         <Character title={character.name} imgSource={character.image} paragraph={character.description} />
                     ))}
+                </div>
+                <div className={styles.allCharactersLink}>
+                    <h5>További fő és mellék szereplők:</h5>
+                    <Link target="_blank" to="https://www.imdb.com/title/tt7335184/">Tovább a szereplők oldalra</Link>
                 </div>
             </section>
         </main>
