@@ -83,6 +83,98 @@
             }
         }
     }
+
+    .hamburgerMenuOpener {
+        display: none;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--text);
+            }
+        }
+    }
+}
+
+.hamburgerMenu {
+    z-index: 99;
+    background-color: var(--bg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    padding: 1.5rem .5rem;
+    height: 100dvh;
+    
+    flex-direction: column;
+
+
+    .hamburgerMenuTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h3 {
+            color: var(--text);
+            font-size: 1.5rem;
+            padding-inline: 10px;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+            color: var(--text);
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    }
+
+    a {
+        margin-block: 2px;
+        padding: 16px 10px;
+        color: var(--nav-text);
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--hover-bg);
+            color: var(--text);
+        }
+    }
+
+    button {
+        margin-inline: 10px;
+        margin-top: 1rem;
+        border: none;
+        background: none;
+        color: var(--nav-text);
+        width: fit-content;
+        cursor: pointer;
+        padding: .5rem;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: var(--hover-bg);
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.hamburgerMenuVisible {
+    display: flex;
+}
+
+.hamburgerMenuHidden {
+    display: none;
 }
 
 @keyframes glitch {
@@ -92,5 +184,23 @@
     } 50% {
         color: var(--red);
         text-shadow: 1px 1px 2px var(--shadow-red), 0 0 1em var(--shadow-red), 0 0 0.2em var(--shadow-red);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .navigationWrapper {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .navigationWrapper {
+        nav {
+            display: none;
+        }
+
+        .hamburgerMenuOpener {
+            display: block;
+        }
     }
 }

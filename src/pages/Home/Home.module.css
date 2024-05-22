@@ -44,3 +44,27 @@
         color: transparent;
     }
 }
+
+@media only screen and (max-width: 675px) {
+    .mainWrapper {
+
+        .heroSection {
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .mainWrapper {
+
+        .heroSection {
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

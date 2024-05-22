@@ -55,3 +55,28 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .charactersWrapper {
+
+        .charactersTitle {
+
+            h1 {
+                width: fit-content;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .charactersWrapper {
+
+        .charactersTitle {
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
