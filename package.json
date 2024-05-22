@@ -2,7 +2,7 @@
   "name": "kedvenc-dolog",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://janibt.github.io/kedvenc-dolog",
+  "homepage": "https://janibt.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
